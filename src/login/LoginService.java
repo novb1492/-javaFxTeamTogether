@@ -31,7 +31,7 @@ public class LoginService {
 		if(member != null) {
 			if(pw.equals(member.getPw())) {
 				reservationService reservationService=new reservationService();
-				reservationService.showDatePage(member);
+				reservationService.showDatePage(member,0);
 			}else {
 				commonService.ErrorMsg("패스워드가 일치하지 않습니다.");
 			}

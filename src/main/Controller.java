@@ -10,6 +10,7 @@ import dto.RegisterDTO;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import login.LoginService;
 import register.RegisterService;
 import reservation.reservationService;
@@ -198,6 +199,27 @@ public class Controller implements Initializable{
 		System.out.println("click37");
 		day=37-getDayGap()+1;
 	}
+	public void nextMonth() {
+		Label month=(Label) reservationForm.lookup("#month");
+		int nextMonth=Integer.parseInt(month.getText());
+		if(nextMonth<12) {
+			nextMonth+=1;
+			reservationService.showDatePage(member,getMonthGap(nextMonth));
+		}else {
+			commonService.ErrorMsg("error", "마지막 월입니다");
+		}
+	}
+	public void minusMonth() {
+		Label month=(Label) reservationForm.lookup("#month");
+		LocalDate tdoay=LocalDate.now();
+		int nextMonth=Integer.parseInt(month.getText());
+		if(nextMonth>tdoay.getMonthValue()) {
+			nextMonth-=1;
+			reservationService.showDatePage(member,getMonthGap(nextMonth));
+		}else {
+			commonService.ErrorMsg("error", "마지막 월입니다");
+		}
+	}
 	public void LoginProc() {
 		loginSvc.LoginProc(loginForm);
 	}
@@ -230,5 +252,10 @@ public class Controller implements Initializable{
 		LocalDate date = LocalDate.of(2021,8,1);
 		DayOfWeek dayOfWeek = date.getDayOfWeek();
 		return dayOfWeek.getValue();
+	}
+	private int  getMonthGap(int month) {
+		LocalDate date = LocalDate.of(2021,month,1);
+		LocalDate today=LocalDate.now();
+		return date.getMonthValue()-today.getMonthValue();
 	}
 }

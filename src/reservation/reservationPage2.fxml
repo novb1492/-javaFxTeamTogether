@@ -13,11 +13,13 @@
          <children>
             <HBox prefHeight="90.0" prefWidth="690.0">
                <children>
+                  <Button mnemonicParsing="false" onAction="#minusMonth" text="이전" />
                   <Label fx:id="month" text="8">
                      <font>
                         <Font name="Arial Bold" size="36.0" />
                      </font>
                   </Label>
+                  <Button mnemonicParsing="false" onAction="#nextMonth" text="다음" />
                </children>
                <padding>
                   <Insets left="335.0" top="30.0" />

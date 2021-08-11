@@ -25,7 +25,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
-import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import main.Controller;
 import memberDao.MemberShipDAO;
@@ -42,15 +41,15 @@ public class reservationService  {
 	private reservationDao reservationDao=new reservationDao();
 
 
-	public void showDatePage(RegisterDTO member) {
+	public void showDatePage(RegisterDTO member,int plusMonth) {
 		System.out.println("showDatePage");
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("reservationPage2.fxml"));
 		Parent reservationForm=loadPageAndGetParent(loader);
-		LocalDate today=LocalDate.now().plusMonths(0);
+		LocalDate today=LocalDate.now().plusMonths(plusMonth);
 
 
 		getMonth(reservationForm,today);
-		getDays(reservationForm);
+		getDays(reservationForm,plusMonth);
 		showId(reservationForm, member.getId());
 		showMemberShip(reservationForm,member.getId());
 		showStage(reservationForm, "reservationPage");
@@ -102,9 +101,9 @@ public class reservationService  {
 		Label month=(Label) reservationForm.lookup("#month");
 		month.setText(Integer.toString(today.getMonthValue()));
 	}
-	private void getDays(Parent reservationForm) {
+	private void getDays(Parent reservationForm,int plusMonth) {
 		System.out.println("getDays");
-		LocalDate today=LocalDate.now().plusMonths(0);
+		LocalDate today=LocalDate.now().plusMonths(plusMonth);
 		YearMonth yearMonth=YearMonth.from(today);
 		int lastDay=yearMonth.lengthOfMonth();
 		int start=0;
