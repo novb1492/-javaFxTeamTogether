@@ -205,6 +205,7 @@ public class Controller implements Initializable{
 		if(nextMonth<12) {
 			nextMonth+=1;
 			reservationService.showDatePage(member,getMonthGap(nextMonth));
+			reservationService.closeWindow(reservationForm);
 		}else {
 			commonService.ErrorMsg("error", "마지막 월입니다");
 		}
@@ -216,6 +217,7 @@ public class Controller implements Initializable{
 		if(nextMonth>tdoay.getMonthValue()) {
 			nextMonth-=1;
 			reservationService.showDatePage(member,getMonthGap(nextMonth));
+			reservationService.closeWindow(reservationForm);
 		}else {
 			commonService.ErrorMsg("error", "마지막 월입니다");
 		}

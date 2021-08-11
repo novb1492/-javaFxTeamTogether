@@ -247,7 +247,7 @@ public class reservationService  {
 			Label month=(Label)reservationForm.lookup("#month");
 			int time=getSelectTime(ShowTimePageForm);
 			LocalDateTime localDateTime=LocalDateTime.now(); 
-			LocalDateTime reservationDate=Timestamp.valueOf("2021-"+month.getText()+"-"+day+" 00:00:00").toLocalDateTime();
+			LocalDateTime reservationDate=Timestamp.valueOf(localDateTime.getYear()+"-"+month.getText()+"-"+day+" 00:00:00").toLocalDateTime();
 			
 			System.out.println(reservationDate+"예약시도일");
 			if(localDateTime.isAfter(Timestamp.valueOf(memberShipDTO.getMemberShipDate()+" 00:00:00").toLocalDateTime())) {
@@ -260,11 +260,11 @@ public class reservationService  {
 				commonService.ErrorMsg(error, "멤버십 기간내 일자를 선택해 주세요");
 				return;
 			}
-			/*if(memberShipDTO.getMemberShipCount()<1) {
+			if(memberShipDTO.getMemberShipCount()<1) {
 				System.out.println("수강 횟수를 소진 하였습니다");
 				commonService.ErrorMsg(error, "수강 횟수를 소진 하였습니다");
 				return;
-			}*/
+			}
 			if(day==0||day>31) {
 				System.out.println("잘못된 날짜 선택입니다");
 				commonService.ErrorMsg(error,"잘못된 날짜 선택입니다");
@@ -315,7 +315,7 @@ public class reservationService  {
 			reservationDto.setrDate(rDate);
 			reservationDao.insert(reservationDto);
 			System.out.println("예약성공");
-			//closeWindow(setShowTimePageForm);
+			closeWindow(ShowTimePageForm);
 			int count=memberShipDTO.getMemberShipCount();
 			memberShipDAO.updateMemberShipCount(id,count-=1);
 			showMemberShipCount(reservationForm, count);
