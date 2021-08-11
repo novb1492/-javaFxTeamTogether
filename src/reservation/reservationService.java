@@ -10,6 +10,8 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.YearMonth;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -347,5 +349,101 @@ public class reservationService  {
 		Stage stage=(Stage) parent.getScene().getWindow();
 		stage.close();
 	}
+	public void showRankOfMonth() {
+		int nine=0,ten=0,eleven=0,twelve=0,thirteen=0,fourteen=0,fifteen=0,sixteen=0,seventeen=0,eightteen=0;
+		Map<Integer, Integer>countByTime=new HashMap<Integer, Integer>();
+		List<reservationDto>allRerservations=reservationDao.findAllRerservation();
+		for(reservationDto r:allRerservations) {
+			Timestamp timestamp=r.getrDate();
+			System.out.println(timestamp+" "+r.getTime());
+			switch (r.getTime()) {
+			case 9:
+				nine+=1;
+				break;
+				case 10:
+					ten+=1;
+					break;
+				case 11:
+					eleven+=1;
+					break;
+				case 12:
+					twelve+=1;
+					break;
+				case 13:
+					thirteen+=1;
+					break;
+				case 14:
+					fourteen+=1;
+					break;
+				case 15:
+					fifteen+=1;
+					break;
+				case 16:
+					sixteen+=1;
+					break;
+				case 17:
+					seventeen+=1;
+					break;
+				case 18:
+					eightteen+=1;
+					break;
+
+			default:
+				break;
+			}
+		}
+		for(int i=openTime;i<=closeTime;i++) {
+			int value=0;
+			switch (i) {
+			case 9:
+				value=nine;
+				break;
+				case 10:
+					value=ten;
+					break;
+				case 11:
+					value=eleven;
+					break;
+				case 12:
+					value=twelve;
+					break;
+				case 13:
+					value=thirteen;
+					break;
+				case 14:
+					value=fourteen;
+					break;
+				case 15:
+					value=fifteen;
+					break;
+				case 16:
+					value=sixteen;
+					break;
+				case 17:
+					value=seventeen;
+					break;
+				case 18:
+					value=eightteen;
+					break;
+
+			default:
+				break;
+			}
+			countByTime.put(i, value);
+		}
+		List<Integer> keySetList = new ArrayList<>(countByTime.keySet());
+		   Collections.sort(keySetList, new Comparator<Integer>() {
+				@Override
+				public int compare(Integer o1, Integer o2) {
+					  return countByTime.get(o2).compareTo(countByTime.get(o1));
+				}
+	        });
+		for(Integer key : keySetList) {
+            System.out.println(String.format("Key : %s, Value : %s", key, countByTime.get(key)));
+        }
+			
+		
+	}
+
 
 }

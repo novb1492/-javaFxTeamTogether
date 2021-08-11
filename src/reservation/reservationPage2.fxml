@@ -188,7 +188,8 @@
                   </HBox>
                </children>
             </VBox>
-            <Button mnemonicParsing="false" text="예약내역페이지" />
+            <Button mnemonicParsing="false" onAction="#goToMypage" text="예약내역페이지" />
+            <Button mnemonicParsing="false" onAction="#showRankOfSeason" text="Button" />
          </children>
       </HBox>
    </children>

@@ -69,4 +69,26 @@ public class reservationDao {
 		}	
 		return null;
 	}
+	public List<reservationDto> findAllRerservation() {
+		String sql="select * from reservation";
+		try {
+			PreparedStatement preparedStatement=connection.prepareStatement(sql);
+			ResultSet resultSet=preparedStatement.executeQuery();
+			List<reservationDto>aList=new ArrayList<reservationDto>();
+			while(resultSet.next()) {
+				reservationDto dto=new reservationDto();
+				dto.setId(resultSet.getInt("id"));
+				dto.setEmail(resultSet.getString("email"));
+				dto.setName(resultSet.getString("name"));
+				dto.setCreated(resultSet.getTimestamp("created"));
+				dto.setTime(resultSet.getInt("time"));
+				dto.setrDate(resultSet.getTimestamp("rDate"));
+				aList.add(dto);
+			}
+			return aList;
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}	
+		return null;
+	}
 }

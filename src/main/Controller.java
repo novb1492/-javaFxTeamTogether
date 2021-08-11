@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import login.LoginService;
 import register.RegisterService;
 import reservation.reservationService;
+import test.test;
 
 
 public class Controller implements Initializable{
@@ -24,8 +25,8 @@ public class Controller implements Initializable{
 	private LoginService loginSvc;
 	private RegisterService regSvc;
 	private reservationService reservationService;
-	
 	private RegisterDTO member;
+	
 	private int day;
 	
 	public void setLoginForm(Parent loginForm) {
@@ -49,7 +50,8 @@ public class Controller implements Initializable{
 		loginSvc = new LoginService();
 		regSvc = new RegisterService();
 		reservationService=new reservationService();
-	}public void click() {
+	}
+	public void click() {
 		System.out.println("click1");
 		day=1-getDayGap()+1;
 	}
@@ -216,6 +218,12 @@ public class Controller implements Initializable{
 	}
 	public void insert() {
 		reservationService.insert(this.reservationForm,this.setShowTimePageForm,this.day,this.member);
+	}
+	public void goToMypage() {
+		System.out.println("goToMypage"+member.getId());
+	}
+	public void showRankOfSeason() {
+		reservationService.showRankOfMonth();
 	}
 	private int getDayGap() {
 		System.out.println("getDayGap");
