@@ -79,10 +79,10 @@
          <children>
             <Button fx:id="day1" mnemonicParsing="false" onAction="#click" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
             <Button fx:id="day2" mnemonicParsing="false" onAction="#click2" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
-            <Button fx:id="day3" mnemonicParsing="false" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
-            <Button fx:id="day4" mnemonicParsing="false" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
-            <Button fx:id="day5" mnemonicParsing="false" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
-            <Button fx:id="day6" mnemonicParsing="false" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" textFill="#0037ff">
+            <Button fx:id="day3" mnemonicParsing="false" onAction="#click3" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
+            <Button fx:id="day4" mnemonicParsing="false" onAction="#click4" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
+            <Button fx:id="day5" mnemonicParsing="false" onAction="#click5" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" />
+            <Button fx:id="day6" mnemonicParsing="false" onAction="#click6" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Button" textFill="#0037ff">
                <font>
                   <Font name="Arial Bold" size="15.0" />
                </font></Button>
