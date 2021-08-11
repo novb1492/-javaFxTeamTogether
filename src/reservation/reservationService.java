@@ -341,7 +341,7 @@ public class reservationService  {
 		return time;
 	}
 	public Timestamp stringToTimestamp(String month,int day) {
-		return Timestamp.valueOf("2021-"+month+"-"+day+" 00:00:00");
+		return Timestamp.valueOf(LocalDate.now().getYear()+"-"+month+"-"+day+" 00:00:00");
 	}
 	public void closeWindow(Parent parent) {
 		System.out.println("closeWindow");
