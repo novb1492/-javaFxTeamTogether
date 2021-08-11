@@ -176,28 +176,33 @@ public class reservationService  {
         return false;
 	}
 	public void showTimePage(Parent reservationForm,int day,RegisterDTO member) {
-		System.out.println("showTimePage");
-		String id=member.getId();
-		if(findMemberShip(id)==null) {
-			System.out.println("멤버십 기간이 만료되었거나 멤버십이 없습니다");
-			commonService.ErrorMsg(error,"멤버십 기간이 만료되었거나 멤버십이 없습니다");
-			return;
-		}
-		FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("showTimePage.fxml"));
-		Parent setShowTimePageForm=loadPageAndGetParent(fxmlLoader);
-	
-		Label getReservationPageMonth=(Label) reservationForm.lookup("#month");
-		System.out.println(getReservationPageMonth.getText()+"달");
+		try {
+			System.out.println("showTimePage"+day);
+			String id=member.getId();
+			if(findMemberShip(id)==null) {
+				System.out.println("멤버십 기간이 만료되었거나 멤버십이 없습니다");
+				commonService.ErrorMsg(error,"멤버십 기간이 만료되었거나 멤버십이 없습니다");
+				return;
+			}
+			FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("showTimePage.fxml"));
+			Parent setShowTimePageForm=loadPageAndGetParent(fxmlLoader);
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		Label showSelectDate=(Label) setShowTimePageForm.lookup("#labelDate");
-		showSelectDate.setText(sdf.format(stringToTimestamp(getReservationPageMonth.getText(), day)));
+			Label getReservationPageMonth=(Label) reservationForm.lookup("#month");
+			System.out.println(getReservationPageMonth.getText()+"달");
+			
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			Label showSelectDate=(Label) setShowTimePageForm.lookup("#labelDate");
+			showSelectDate.setText(sdf.format(stringToTimestamp(getReservationPageMonth.getText(), day)));
+			
+			getTimes(setShowTimePageForm,reservationForm,day);
+			showStage(setShowTimePageForm,"showTimePage");
+			
+			Controller mainController=fxmlLoader.getController();
+			mainController.setShowTimePageForm(reservationForm,setShowTimePageForm,day,member);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
 		
-		getTimes(setShowTimePageForm,reservationForm,day);
-		showStage(setShowTimePageForm,"showTimePage");
-		
-		Controller mainController=fxmlLoader.getController();
-		mainController.setShowTimePageForm(reservationForm,setShowTimePageForm,day,member);
 	}
 	private void getTimes(Parent ShowTimePageForm,Parent reservationForm,int day) {
 		System.out.println("getTimes"+day);

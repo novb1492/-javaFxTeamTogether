@@ -251,11 +251,13 @@ public class Controller implements Initializable{
 	}
 	private int getDayGap() {
 		System.out.println("getDayGap");
-		LocalDate date = LocalDate.of(2021,8,1);
+		Label month=(Label) reservationForm.lookup("#month");
+		LocalDate date = LocalDate.of(2021,Integer.parseInt(month.getText()),1);
 		DayOfWeek dayOfWeek = date.getDayOfWeek();
 		return dayOfWeek.getValue();
 	}
 	private int  getMonthGap(int month) {
+		System.out.println("getMonthGap");
 		LocalDate date = LocalDate.of(2021,month,1);
 		LocalDate today=LocalDate.now();
 		return date.getMonthValue()-today.getMonthValue();
