@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.ManagerController">
+   <children>
+      <HBox layoutX="25.0" layoutY="42.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <DatePicker />
+         </children>
+      </HBox>
+      <Label layoutX="25.0" layoutY="27.0" text="예약 확인" />
+      <Button fx:id="updateMember" layoutX="45.0" layoutY="210.0" mnemonicParsing="false" onAction="#openMember" prefHeight="30.0" text="회원정보 수정" />
+      <Button fx:id="updateInstructor" layoutX="173.0" layoutY="210.0" mnemonicParsing="false" onAction="#openInstructor" prefHeight="30.0" text="강사데이터 수정" />
+      <Button fx:id="updateMembership" layoutX="315.0" layoutY="210.0" mnemonicParsing="false" onAction="#openMembership" prefHeight="30.0" text="회원권 수정" />
+   </children>
+</AnchorPane>

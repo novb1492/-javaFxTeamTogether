@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="400.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <children>
+      <Label text="선택한 날짜" />
+      <Label fx:id="labelDate" text="Label" />
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio9" mnemonicParsing="false" text="RadioButton">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggle" />
+               </toggleGroup>
+            </RadioButton>
+            <Label fx:id="timeOfPeople9" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime9" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio10" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople10" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime10" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio11" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople11" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime11" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio12" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople12" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime12" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio13" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople13" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime13" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio14" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople14" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime14" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio15" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople15" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime15" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio16" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople16" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime16" text="maxOfTime" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio17" mnemonicParsing="false" text="17~18시" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople17" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime17" text="Label" />
+         </children>
+      </HBox>
+      <HBox prefHeight="10.0" prefWidth="200.0">
+         <children>
+            <RadioButton fx:id="rdaio18" mnemonicParsing="false" text="RadioButton" toggleGroup="$toggle" />
+            <Label fx:id="timeOfPeople18" text="Label" />
+            <Label text="/" />
+            <Label fx:id="maxOfTime18" text="Label" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#insert" text="예약하기" />
+   </children>
+</VBox>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="month" text="month" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="day1" mnemonicParsing="false" onAction="#click" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day2" mnemonicParsing="false" onAction="#click2" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day3" mnemonicParsing="false" onAction="#click3" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day4" mnemonicParsing="false" onAction="#click4" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day5" mnemonicParsing="false" onAction="#click5" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day6" mnemonicParsing="false" onAction="#click6" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day7" mnemonicParsing="false" onAction="#click7" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="day8" mnemonicParsing="false" onAction="#click8" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day9" mnemonicParsing="false" onAction="#click9" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day10" mnemonicParsing="false" onAction="#click10" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day11" mnemonicParsing="false" onAction="#click11" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day12" mnemonicParsing="false" onAction="#click12" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day13" mnemonicParsing="false" onAction="#click13" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day14" mnemonicParsing="false" onAction="#click14" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="day15" mnemonicParsing="false" onAction="#click15" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day16" mnemonicParsing="false" onAction="#click16" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day17" mnemonicParsing="false" onAction="#click17" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day18" mnemonicParsing="false" onAction="#click18" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day19" mnemonicParsing="false" onAction="#click19" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day20" mnemonicParsing="false" onAction="#click20" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day21" mnemonicParsing="false" onAction="#click21" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="day22" mnemonicParsing="false" onAction="#click22" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day23" mnemonicParsing="false" onAction="#click23" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day24" mnemonicParsing="false" onAction="#click24" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day25" mnemonicParsing="false" onAction="#click25" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day26" mnemonicParsing="false" onAction="#click26" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day27" mnemonicParsing="false" onAction="#click27" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day28" mnemonicParsing="false" onAction="#click28" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="day29" mnemonicParsing="false" onAction="#click29" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day30" mnemonicParsing="false" onAction="#click30" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Button fx:id="day31" mnemonicParsing="false" onAction="#click31" onMouseClicked="#show" prefHeight="200.0" prefWidth="100.0" text="Button" />
+            <Label fx:id="id" text="Label" />
+            <Label text=" 님 환영합니다" />
+            <VBox prefHeight="100.0" prefWidth="222.0">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="132.0">
+                     <children>
+                        <Label text="멤버십 이름:" />
+                        <Label fx:id="memberShipName" text="멤버십 회원이 아닙니다" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="169.0">
+                     <children>
+                        <Label text="멤버십 종료일:" />
+                        <Label fx:id="memberShipDate" text="멤버십 회원이 아닙니다" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="169.0">
+                     <children>
+                        <Label text="남은 수업 횟수" />
+                        <Label fx:id="memberShipCount" text=":멤버십 회원이 아닙니다" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

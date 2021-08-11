@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+   <children>
+      <BorderPane layoutX="-7.0" prefHeight="418.0" prefWidth="615.0">
+         <top>
+            <Label alignment="CENTER" layoutX="178.0" layoutY="20.0" prefHeight="75.0" prefWidth="603.0" style="-fx-background-color: #d0a0de;" text="JOIN" textFill="#110e43" BorderPane.alignment="BOTTOM_CENTER">
+               <font>
+                  <Font name="Nirmala UI Bold" size="36.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <GridPane maxHeight="235.0" prefHeight="235.0" prefWidth="615.0" BorderPane.alignment="TOP_CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="112.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.33331298828125" minWidth="10.0" prefWidth="157.33331298828125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.33331298828125" minWidth="10.0" prefWidth="75.33331298828125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.3333435058594" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.3333435058594" minWidth="10.0" prefWidth="187.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID" textFill="#000093">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="비밀번호" textFill="#000093" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="비밀번호확인" textFill="#000093" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="이름" textFill="#000093" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="성별" textFill="#000093" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="전화번호" textFill="#000093" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="나이" textFill="#000093" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="이용경로" textFill="#000093" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="idText" alignment="CENTER" prefHeight="22.0" prefWidth="111.0" promptText="id" GridPane.columnIndex="1" />
+                  <TextField fx:id="nameText" alignment="CENTER" promptText="name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="pwText" alignment="CENTER" promptText="pw" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <PasswordField fx:id="confirmText" alignment="CENTER" promptText="confirm" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0" GridPane.columnIndex="4">
+                     <children>
+                        <RadioButton fx:id="manRadio" mnemonicParsing="false" text="남">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="womanRadio" mnemonicParsing="false" text="여" toggleGroup="$gender" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="phoneText" alignment="CENTER" promptText="-없이 작성 number" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="ageText" alignment="CENTER" promptText="ex) 31" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <GridPane GridPane.columnIndex="4" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="naverCheck" mnemonicParsing="false" text="네이버" />
+                        <CheckBox fx:id="nearCheck" mnemonicParsing="false" text="지인추천" GridPane.columnIndex="1" />
+                        <CheckBox fx:id="instarCheck" mnemonicParsing="false" text="인스타" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="adCheck" mnemonicParsing="false" text="전단지" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label text="이메일" textFill="#000093" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="회원권" textFill="#000093" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailText" alignment="TOP_CENTER" promptText="email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <children>
+                        <RadioButton fx:id="registration" mnemonicParsing="false" text="등록">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="check" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="unregistered" mnemonicParsing="false" text="미 등록" toggleGroup="$check" />
+                     </children>
+                     <padding>
+                        <Insets top="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="regButton" mnemonicParsing="false" onAction="#RegisterProc" prefHeight="30.0" prefWidth="100.0" text="가입하기">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="canbutton" mnemonicParsing="false" onAction="#CancelProc" prefHeight="30.0" prefWidth="100.0" text="취소">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
