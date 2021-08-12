@@ -1,7 +1,7 @@
 
 예약페이지를 담당했습니다
 
-패키지 이름: reservation
+담당 패키지 이름: reservation
 사용중인 컨트롤러: Main(패키지)->Controller(클래스)
 
 시나리오
